@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.light-theme{
+    --color-bg-main: #F9F9F9;
+    --color-text-main: #1E1E1E;
+    --color-button-link: #0077CC;
+    --color-bg-cards: #FFFFFF;
+    --color-hover-button: #005FA3;
+    --color-border: #E0E0E0;
+}
+
+body.dark-theme {
+    --color-bg-main: #1E1E1E;
+    --color-text-main: #F9F9F9;
+    --color-button-link: #4DA6FF;
+    --color-bg-cards: #2C2C2C;
+    --color-hover-button: #66BFFF;
+    --color-border: #444444;
+}
+
+body {
+    font-family: Inter;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul li {
+    list-style: none;
+}
+
+.header {
+    padding: 1rem 0;
+    background-color: var(--color-bg-main);
+    border-bottom: 1px solid var(--color-button-link);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.header .container .logo{
+    color: #0077CC;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.menu-desktop-right {
+    display: flex;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 32px;
+    height: 32px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    color: var(--color-button-link);
+}
+
+/*----------------------------------- Header Mobile --------------------------------------*/
+
+.menu-desktop {
+    display: none;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-toggle img {
+    width: 24px;
+}
