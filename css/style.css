@@ -10,7 +10,7 @@ body.light-theme{
     --color-button-link: #0077CC;
     --color-bg-cards: #FFFFFF;
     --color-hover-button: #005FA3;
-    --color-border: #E0E0E0;
+    --color-border: #e0e0e056;
 }
 
 body.dark-theme {
@@ -102,4 +102,40 @@ ul li {
 
 #menu-toggle img {
     width: 24px;
+}
+
+/*----------------------------------- Header Mobile --------------------------------------*/
+
+.hero-section {
+    padding: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1440px;
+}
+
+.hero-section .hero-content-mobile {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section .hero-content-desktop {
+    display: none;
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: gray;
+    margin: 0 auto 2.5rem auto; 
+    max-width: 320px;
 }
