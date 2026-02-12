@@ -142,11 +142,17 @@ ul li {
 
 /*----------------------------------- main Mobile --------------------------------------*/
 
+.call-action {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .call-action .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 2rem;
-    padding: 1rem;
+    padding: 2rem 20px;
 }
 
 .cards {
@@ -210,13 +216,141 @@ ul li {
 }
 
 .registration-container {
+    padding: 2rem 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.main-section-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+
+#form-matricula {
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #eee; 
+    border-radius: 12px;
+}
+
+#form-matricula h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #000;
+    text-align: left;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+    position: relative; 
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #666;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column; 
+    gap: 0;
+}
+
+#btn-enviar {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+#btn-enviar:hover {
+    background-color: #1d4ed8;
+}
+
+.error-message {
     display: none;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background-color: #f1f5f9;
+    color: #64748b;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.error-message.active {
+    display: block; 
 }
 
 .areas-contaier {
-    display: none;
+    padding: 2rem 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+.ares {
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.ares h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.ares p {
+    font-size: 1rem;
+    color: #374151; 
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.ares p:last-child {
+    margin-bottom: 0;
+}
 .footer {
     padding: 3rem 1.25rem 1rem 1.25rem;
     background-color: var(--color-bg-main);
@@ -289,4 +423,80 @@ ul li {
     height: 14px;
     display: inline-block;
     margin: 0
+}
+
+/* ----------------------------------- Responsividade Desktop -------------------------------------- */
+
+@media (min-width: 1024px) {
+        .menu-desktop {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .hero-section h2 {
+        font-size: 3rem; 
+    }
+
+    .hero-section p {
+        max-width: 600px;
+    }
+
+    .call-action .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main-wrapper-matricula {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .registration-container {
+        flex: 2;
+        max-width: none;
+        margin: 0;
+    }
+
+    .areas-contaier {
+        flex: 1;
+        max-width: none;
+        margin-top: 5.5rem;
+    }
+
+    .form-row {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .form-row .form-group {
+        flex: 1;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .footer-column p {
+        justify-content: flex-start;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
 }
