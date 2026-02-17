@@ -10,7 +10,7 @@ body.light-theme {
     --color-button-link: #0077CC;
     --color-bg-cards: #FFFFFF;
     --color-hover-button: #005FA3;
-    --color-border: #e0e0e056;
+    --color-border: #8d8d8d56;
 }
 
 body.dark-theme {
@@ -55,8 +55,8 @@ ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
+    max-width: 1600px;
     padding: 0 20px;
 }
 
@@ -110,7 +110,6 @@ ul li {
     padding: 2rem;
     margin: 0 auto;
     text-align: center;
-    max-width: 1440px;
 }
 
 .hero-section .hero-content-mobile {
@@ -137,14 +136,13 @@ ul li {
     line-height: 1.5;
     color: gray;
     margin: 0 auto 2.5rem auto;
-    max-width: 320px;
+
 }
 
 /*----------------------------------- main Mobile --------------------------------------*/
 
 .call-action {
     width: 100%;
-    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -225,16 +223,16 @@ ul li {
 .main-section-title {
     font-size: 1.8rem;
     font-weight: 800;
-    color: #000;
+    color: var(--color-text-main);
     margin-bottom: 1.5rem;
     text-align: left;
 }
 
 
 #form-matricula {
-    background-color: #fff;
+    background-color: var(--color-bg-cards);
     padding: 2rem;
-    border: 1px solid #eee; 
+    border: 1px solid #8d8d8d56; 
     border-radius: 12px;
 }
 
@@ -242,7 +240,7 @@ ul li {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: #000;
+    color: var(--color-text-main);
     text-align: left;
 }
 
@@ -258,18 +256,18 @@ ul li {
 .form-group label {
     font-size: 0.9rem;
     font-weight: 700;
-    color: #000;
+    color: var(--color-text-main);
 }
 
 .form-group input, 
 .form-group select {
     width: 100%;
     padding: 0.8rem 1rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #8d8d8d56;
     border-radius: 8px;
     font-size: 1rem;
-    color: #666;
-    background-color: #fff;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-main);
     transition: all 0.2s ease;
 }
 
@@ -327,9 +325,9 @@ ul li {
 }
 
 .ares {
-    background-color: #fff;
+    background-color: var(--color-bg-main);
     padding: 2rem;
-    border: 1px solid #eee;
+    border: 1px solid #8d8d8d56;
     border-radius: 12px;
     text-align: left;
 }
@@ -337,13 +335,13 @@ ul li {
 .ares h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #000;
+    color:var(--color-text-main);
     margin-bottom: 1.5rem;
 }
 
 .ares p {
     font-size: 1rem;
-    color: #374151; 
+    color: var(--color-text-main); 
     margin-bottom: 0.75rem;
     font-weight: 500;
 }
@@ -431,7 +429,11 @@ ul li {
         .menu-desktop {
         display: flex;
         gap: 20px;
-        align-items: center;
+        align-items: end;
+    }
+
+    .menu-mobile {
+        display: none;
     }
 
     #menu-toggle {
@@ -450,7 +452,7 @@ ul li {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
-        max-width: 1200px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 
@@ -458,7 +460,7 @@ ul li {
         display: flex;
         align-items: flex-start;
         gap: 30px;
-        max-width: 1200px;
+        max-width: 1600px;
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -487,7 +489,7 @@ ul li {
     .footer-container {
         flex-direction: row;
         justify-content: space-between;
-        max-width: 1200px;
+        max-width: 1600px;
         margin: 0 auto;
         text-align: left;
     }
