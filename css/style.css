@@ -90,18 +90,13 @@ ul li {
 
 /*----------------------------------- Header Mobile --------------------------------------*/
 
-.menu-desktop {
+.menu-desktop-right li:not(:last-child) {
     display: none;
 }
 
-#menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#menu-toggle img {
-    width: 24px;
+.menu-desktop-right {
+    display: flex;
+    list-style: none;
 }
 
 /*----------------------------------- Header Mobile --------------------------------------*/
@@ -148,7 +143,7 @@ ul li {
 
 .call-action .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     padding: 2rem 20px;
 }
@@ -170,7 +165,7 @@ ul li {
 
 .card-content {
     padding: 1.5rem;
-    text-align: left    ;
+    text-align: left;
 }
 
 .cards h3 {
@@ -190,7 +185,7 @@ ul li {
 }
 
 .cards p img {
-    width: 16px; 
+    width: 16px;
     height: 16px;
     object-fit: contain;
 }
@@ -210,7 +205,7 @@ ul li {
 }
 
 .btn-details:hover {
-    background-color: #005FA3 ;
+    background-color: #005FA3;
 }
 
 .registration-container {
@@ -232,7 +227,7 @@ ul li {
 #form-matricula {
     background-color: var(--color-bg-cards);
     padding: 2rem;
-    border: 1px solid #8d8d8d56; 
+    border: 1px solid #8d8d8d56;
     border-radius: 12px;
 }
 
@@ -250,7 +245,7 @@ ul li {
     flex-direction: column;
     gap: 8px;
     margin-bottom: 1.25rem;
-    position: relative; 
+    position: relative;
 }
 
 .form-group label {
@@ -259,7 +254,7 @@ ul li {
     color: var(--color-text-main);
 }
 
-.form-group input, 
+.form-group input,
 .form-group select {
     width: 100%;
     padding: 0.8rem 1rem;
@@ -271,7 +266,7 @@ ul li {
     transition: all 0.2s ease;
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group select:focus {
     outline: none;
     border-color: #2563eb;
@@ -280,7 +275,7 @@ ul li {
 
 .form-row {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 0;
 }
 
@@ -315,7 +310,7 @@ ul li {
 }
 
 .error-message.active {
-    display: block; 
+    display: block;
 }
 
 .areas-contaier {
@@ -335,13 +330,13 @@ ul li {
 .ares h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    color:var(--color-text-main);
+    color: var(--color-text-main);
     margin-bottom: 1.5rem;
 }
 
 .ares p {
     font-size: 1rem;
-    color: var(--color-text-main); 
+    color: var(--color-text-main);
     margin-bottom: 0.75rem;
     font-weight: 500;
 }
@@ -349,10 +344,11 @@ ul li {
 .ares p:last-child {
     margin-bottom: 0;
 }
+
 .footer {
     padding: 3rem 1.25rem 1rem 1.25rem;
     background-color: var(--color-bg-main);
-    text-align: center; 
+    text-align: center;
     border-top: 1px solid var(--color-border);
 }
 
@@ -376,7 +372,7 @@ ul li {
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     gap: 8px;
 }
 
@@ -426,22 +422,26 @@ ul li {
 /* ----------------------------------- Responsividade Desktop -------------------------------------- */
 
 @media (min-width: 1024px) {
-        .menu-desktop {
-        display: flex;
+    .menu-desktop-right li:not(:last-child) {
+        display: block;
         gap: 20px;
-        align-items: end;
     }
 
-    .menu-mobile {
-        display: none;
+    .menu-desktop-right li a {
+        color: var(--color-text-main);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 1.3rem;
     }
 
-    #menu-toggle {
-        display: none;
+    #home {
+        color: #0077CC !important;
+        font-weight: 500;
     }
+
 
     .hero-section h2 {
-        font-size: 3rem; 
+        font-size: 3rem;
     }
 
     .hero-section p {
