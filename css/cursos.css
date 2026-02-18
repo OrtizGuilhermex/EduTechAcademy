@@ -10,7 +10,7 @@ body.light-theme {
     --color-button-link: #0077CC;
     --color-bg-cards: #FFFFFF;
     --color-hover-button: #005FA3;
-    --color-border: #e0e0e056;
+    --color-border: #8d8d8d56;
 }
 
 body.dark-theme {
@@ -55,8 +55,8 @@ ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
+    max-width: 1600px;
     padding: 0 20px;
 }
 
@@ -90,18 +90,13 @@ ul li {
 
 /*----------------------------------- Header Mobile --------------------------------------*/
 
-.menu-desktop {
+.menu-desktop-right li:not(:last-child) {
     display: none;
 }
 
-#menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#menu-toggle img {
-    width: 24px;
+.menu-desktop-right {
+    display: flex;
+    list-style: none;
 }
 
 /*----------------------------------- Header Mobile --------------------------------------*/
@@ -110,7 +105,6 @@ ul li {
     padding: 2rem;
     margin: 0 auto;
     text-align: center;
-    max-width: 1440px;
 }
 
 .hero-section .hero-content-mobile {
@@ -137,16 +131,21 @@ ul li {
     line-height: 1.5;
     color: gray;
     margin: 0 auto 2.5rem auto;
-    max-width: 320px;
+
 }
 
 /*----------------------------------- main Mobile --------------------------------------*/
 
+.call-action {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .call-action .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    padding: 1rem;
+    padding: 2rem 20px;
 }
 
 .cards {
@@ -166,7 +165,7 @@ ul li {
 
 .card-content {
     padding: 1.5rem;
-    text-align: left    ;
+    text-align: left;
 }
 
 .cards h3 {
@@ -186,7 +185,7 @@ ul li {
 }
 
 .cards p img {
-    width: 16px; 
+    width: 16px;
     height: 16px;
     object-fit: contain;
 }
@@ -206,21 +205,150 @@ ul li {
 }
 
 .btn-details:hover {
-    background-color: #005FA3 ;
+    background-color: #005FA3;
 }
 
 .registration-container {
+    padding: 2rem 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.main-section-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+
+#form-matricula {
+    background-color: var(--color-bg-cards);
+    padding: 2rem;
+    border: 1px solid #8d8d8d56;
+    border-radius: 12px;
+}
+
+#form-matricula h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-text-main);
+    text-align: left;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #8d8d8d56;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-main);
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#btn-enviar {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+#btn-enviar:hover {
+    background-color: #1d4ed8;
+}
+
+.error-message {
     display: none;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background-color: #f1f5f9;
+    color: #64748b;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.error-message.active {
+    display: block;
 }
 
 .areas-contaier {
-    display: none;
+    padding: 2rem 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ares {
+    background-color: var(--color-bg-main);
+    padding: 2rem;
+    border: 1px solid #8d8d8d56;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.ares h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+}
+
+.ares p {
+    font-size: 1rem;
+    color: var(--color-text-main);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.ares p:last-child {
+    margin-bottom: 0;
 }
 
 .footer {
     padding: 3rem 1.25rem 1rem 1.25rem;
     background-color: var(--color-bg-main);
-    text-align: center; 
+    text-align: center;
     border-top: 1px solid var(--color-border);
 }
 
@@ -244,7 +372,7 @@ ul li {
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     gap: 8px;
 }
 
@@ -291,19 +419,29 @@ ul li {
     margin: 0
 }
 
+/* ----------------------------------- Responsividade Desktop -------------------------------------- */
+
 @media (min-width: 1024px) {
-        .menu-desktop {
-        display: flex;
+    .menu-desktop-right li:not(:last-child) {
+        display: block;
         gap: 20px;
-        align-items: center;
     }
 
-    #menu-toggle {
-        display: none;
+    .menu-desktop-right li a {
+        color: var(--color-text-main);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 1.3rem;
     }
+
+    #home {
+        color: #0077CC !important;
+        font-weight: 500;
+    }
+
 
     .hero-section h2 {
-        font-size: 3rem; 
+        font-size: 3rem;
     }
 
     .hero-section p {
@@ -314,7 +452,7 @@ ul li {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
-        max-width: 1200px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 
@@ -322,7 +460,7 @@ ul li {
         display: flex;
         align-items: flex-start;
         gap: 30px;
-        max-width: 1200px;
+        max-width: 1600px;
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -333,10 +471,25 @@ ul li {
         margin: 0;
     }
 
+    .areas-contaier {
+        flex: 1;
+        max-width: none;
+        margin-top: 5.5rem;
+    }
+
+    .form-row {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .form-row .form-group {
+        flex: 1;
+    }
+
     .footer-container {
         flex-direction: row;
         justify-content: space-between;
-        max-width: 1200px;
+        max-width: 1600px;
         margin: 0 auto;
         text-align: left;
     }
